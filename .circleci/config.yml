@@ -12,9 +12,7 @@ jobs:
       - checkout
 
       - name: install dependencies
-        run: |
-        gem install bundler
+        run: gem install bundler
 
       - name: test application
-        run: |
-        rake spec
+        run: rake spec
