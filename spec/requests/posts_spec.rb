@@ -10,5 +10,9 @@ RSpec.describe 'Posts', type: :request do
     it 'free' do
 
     end
+
+    it 'invalid' do
+      raise
+    end
   end
 end
