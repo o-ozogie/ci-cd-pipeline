@@ -8,11 +8,12 @@ jobs:
       - image: circleci/ruby:2.6.5-stretch-node
     executor: ruby/default
     steps:
-      - name: checkout
       - checkout
 
-      - name: install dependencies
-        run: gem install bundler
+      - run:
+          name: install dependencies
+          command: gem install bundler | bundle install
 
-      - name: test application
-        run: rake spec
+      - run:
+          name: test
+          command: rake spec
